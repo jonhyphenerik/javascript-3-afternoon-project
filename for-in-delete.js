@@ -98,7 +98,7 @@ function secrets(obj){
   secretMassage = '';
   for(let item in obj){
     // console.log(item[0]+item[1], obj[item]);
-    if(item[0]+item[1]=='sh'){
+    if(item[0]+item[1]=='sh'){ /* I'm sure there's a cleaner way to do this but I couldn't figure it out */
       secretMassage += obj[item]
     }
   }
@@ -162,8 +162,10 @@ var deleteTheBigNumbers = {
 
 function deleteTheBigNumbers(obj) {
   for(let item in obj) {
-    if(obj.item>100) {
-      delete obj.item;
+    // console.log(item, obj[item])
+    // console.log(item, obj.item);
+    if(obj[item]>100) {
+      delete obj[item];
     }
   }
   return obj
@@ -180,14 +182,15 @@ function deleteTheBigNumbers(obj) {
   Return the updated object.
 */
 
+
 function startsWithK(obj){
   for(let item in obj){
     if(item[0]==='k'){
       delete obj[item]
     }
   }
+  return obj
 }
-
 
 
 ////////// PROBLEM 8 //////////
@@ -201,6 +204,13 @@ function startsWithK(obj){
   (hint: the method includes() may be of use...)
 */
 
-//Code Here
+function hiddenTreasure(obj){
+  for(let item in obj){
+    if(!obj[item].includes('treasure')){
+      delete obj[item]
+    }
+  }
+  return obj
+}
 
 
