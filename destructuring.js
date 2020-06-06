@@ -52,7 +52,7 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-funtion totalPopulation(obj) {
+function totalPopulation(obj) {
   const {utah, california, texas, arizona} = obj;
     return utah+california+texas+arizona;
 }
@@ -70,7 +70,7 @@ funtion totalPopulation(obj) {
 */
 
 function ingredients(obj) {
-  {carb, fat, protein} = ingredients;
+  const {carb, fat, protein} = ingredients;
   newArr = [];
   newArr.push(carb), newArr.push(fat), newArr.push(protein);
   return newArr;
@@ -93,7 +93,7 @@ function ingredients(obj) {
 */
 
 function largeNumbers({first,second, third}) {
-  return min(first, second, third)
+  return Math.min(first, second, third)
 }
 
 
@@ -101,7 +101,7 @@ function largeNumbers({first,second, third}) {
 ////////// PROBLEM 6 //////////
 
 /*
-  Write a function called numberGroups that will take a destructured object as it's parameter.
+  Write a function called numberGroups that will take a destructured object as its parameter.
   The object properties will be named a, b, and c and their values will be arrays of numbers.
   Find the longest array and return that array.
 */

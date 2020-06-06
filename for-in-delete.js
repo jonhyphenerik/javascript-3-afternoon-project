@@ -42,7 +42,7 @@
 function showValues( obj ) {
 stringOfStrings = ''; 
   for(let item in obj) {
-    stringOfStrings += item;
+    stringOfStrings += obj[item]
   }
   return stringOfStrings
 }
@@ -76,7 +76,7 @@ function greaterThan10(obj) {
   Return the updated object.
 */
 
-function doubloe(obj) {
+function double(obj) {
   for(let item in obj){
     obj[item]*=2
   }
@@ -97,11 +97,13 @@ function doubloe(obj) {
 function secrets(obj){
   secretMassage = '';
   for(let item in obj){
-    if(item[0,1]==='sh'){
-      secretMassage += obj[item];
-    }
+    // console.log(item[0]+item[1], obj[item]);
+    if(item[0]+item[1]=='sh'){
+      secretMassage += obj[item]
     }
   }
+  return secretMassage
+}
 
 
 
@@ -158,7 +160,14 @@ var deleteTheBigNumbers = {
   Write a for in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
 
-function deleteTheBigNumbers()
+function deleteTheBigNumbers(obj) {
+  for(let item in obj) {
+    if(obj.item>100) {
+      delete obj.item;
+    }
+  }
+  return obj
+}
 
 
 
@@ -171,7 +180,13 @@ function deleteTheBigNumbers()
   Return the updated object.
 */
 
-//Code Here
+function startsWithK(obj){
+  for(let item in obj){
+    if(item[0]==='k'){
+      delete obj[item]
+    }
+  }
+}
 
 
 
