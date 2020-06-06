@@ -40,7 +40,11 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+stringOfStrings = ''; 
+  for(let item in obj) {
+    stringOfStrings += item;
+  }
+  return stringOfStrings
 }
 
 
@@ -53,7 +57,14 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function greaterThan10(obj) {
+  for(let item in obj){
+    if(obj[item]>10) {
+      obj[item]=0;
+    }
+  }
+  return obj
+}
 
 
 
@@ -65,8 +76,12 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
-
+function doubloe(obj) {
+  for(let item in obj){
+    obj[item]*=2
+  }
+  return obj
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -79,7 +94,14 @@ function showValues( obj ) {
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here
+function secrets(obj){
+  secretMassage = '';
+  for(let item in obj){
+    if(item[0,1]==='sh'){
+      secretMassage += obj[item];
+    }
+    }
+  }
 
 
 
@@ -110,7 +132,14 @@ function showValues( obj ) {
   Delete the property password and return the object.
 */
 
-//Code Here
+function removePassword(obj){
+  for(let item in obj) {
+    if(item==='password'){
+      delete obj[item]
+    }
+  }
+  return obj
+}
 
 
 
@@ -129,7 +158,7 @@ var deleteTheBigNumbers = {
   Write a for in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
 
-//Code Here
+function deleteTheBigNumbers()
 
 
 

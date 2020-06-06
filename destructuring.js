@@ -24,8 +24,6 @@ var carDetails = {
 const {color, make, model, year} = carDetails;
 
 
-
-
 ////////// PROBLEM 2 //////////
 
 /*
@@ -54,7 +52,7 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-funtion totalPopulation(obj) = {
+funtion totalPopulation(obj) {
   const {utah, california, texas, arizona} = obj;
     return utah+california+texas+arizona;
 }
@@ -74,7 +72,8 @@ funtion totalPopulation(obj) = {
 function ingredients(obj) {
   {carb, fat, protein} = ingredients;
   newArr = [];
-  newArr.push(carb), newArr.push(fat), newArr.push(protein)
+  newArr.push(carb), newArr.push(fat), newArr.push(protein);
+  return newArr;
 }
 
 
