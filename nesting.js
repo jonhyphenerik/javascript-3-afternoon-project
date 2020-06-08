@@ -81,7 +81,7 @@ let removeDuplicates = () => {
         i++;
       }
     }
-    newArr.push(arr[i]);
+    newArr.push(workplaceAccidents[i]);
   }
 return newArr;
 }
