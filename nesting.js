@@ -50,7 +50,11 @@ var employees = [
     3. Return the updated employee array.
 */
 
-let employeeUpdater = employees.firstName("Theo").delete
+let employeeUpdater = () => {
+  employees.splice(2,1);
+  employees[employees.length-1].department = "HR";  
+  return employees
+}
 
 
 
@@ -69,7 +73,20 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+let removeDuplicates = () => {
+  newArr = [];
+  for(i=0; i<=workplaceAccidents.length-1; i++) {
+    for(j=i+1; j<workplaceAccidents.length-1; j++) {
+      if(workplaceAccidents[i] == workplaceAccidents[j]) {
+        i++;
+      }
+    }
+    newArr.push(arr[i]);
+  }
+return newArr;
+}
+
+
 
 
 
