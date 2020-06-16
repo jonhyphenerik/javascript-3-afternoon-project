@@ -73,18 +73,7 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-let removeDuplicates = () => {
-  newArr = [];
-  for(i=0; i<=workplaceAccidents.length-1; i++) {
-    for(j=i+1; j<workplaceAccidents.length-1; j++) {
-      if(workplaceAccidents[i] == workplaceAccidents[j]) {
-        i++;
-      }
-    }
-    newArr.push(workplaceAccidents[i]);
-  }
-return newArr;
-}
+let removeDuplicates = arr => [...new Set(arr)];
 
 
 
@@ -114,9 +103,10 @@ var cat = {
     2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
 */
 
-//Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+
+
+var grumpyActivity=cat[catFriends][0][activities][1];
+var fluffy2ndFriend=cat[catFriends][1][name];
 
 
 
@@ -156,8 +146,11 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
-
+function recordCleaner(){
+  for(let item in myCar.accidents){
+    myCar.accidents[item].atFaultForAccident=false
+  }
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -175,6 +168,16 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
-
-
+function looper(){
+  for(let arr in numsArr){
+    for(let item in arr){
+      if(arr[item]%2){
+        arr[item]='even'
+      }
+      else{
+        arr[item]='odd'
+      }
+    }
+  }
+  return numsArr
+}
