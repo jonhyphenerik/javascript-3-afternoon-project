@@ -105,8 +105,8 @@ var cat = {
 
 
 
-var grumpyActivity=cat[catFriends][0][activities][1];
-var fluffy2ndFriend=cat[catFriends][1][name];
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend=cat.catFriends[1].name;
 
 
 
@@ -169,13 +169,13 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 function looper(){
-  for(let arr in numsArr){
-    for(let item in arr){
-      if(arr[item]%2){
-        arr[item]='even'
+  for(i=0;i<3; i++){
+    for(j=0; j<numsArr[i].length; j++){
+      if(numsArr[i][j]%2){
+        numsArr[i][j]='even'
       }
       else{
-        arr[item]='odd'
+        numsArr[i][j]='odd'
       }
     }
   }
