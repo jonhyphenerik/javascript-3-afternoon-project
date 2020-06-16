@@ -156,7 +156,11 @@ function recordCleaner(){
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
-var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
+var numsArr = [
+  [1, 2, 3, 4], 
+  [5, 6], 
+  [7, 8, 9, 10, 11]
+];
 // Do not edit the code above.
 
 /*
@@ -172,10 +176,10 @@ function looper(){
   for(i=0;i<3; i++){
     for(j=0; j<numsArr[i].length; j++){
       if(numsArr[i][j]%2){
-        numsArr[i][j]='even'
+        numsArr[i][j]='odd'
       }
       else{
-        numsArr[i][j]='odd'
+        numsArr[i][j]='even'
       }
     }
   }
