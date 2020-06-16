@@ -70,10 +70,9 @@ function totalPopulation(obj) {
 */
 
 function ingredients(obj) {
-  const {carb, fat, protein} = ingredients;
-  newArr = [];
-  newArr.push(carb), newArr.push(fat), newArr.push(protein);
-  return newArr;
+  const {carb, fat, protein} = obj;
+
+  return [carb, fat, protein];
 }
 
 
@@ -106,15 +105,14 @@ function largeNumbers({first,second, third}) {
   Find the longest array and return that array.
 */
 
-function numberGroups(a, b, c){
-  winningLength = max(a.length, b.length, c.length);
-  if(a.length == winningLength) {
+function numberGroups({a, b, c}){
+  if(a.length>b.length && a.length>c.length){
     return a
   }
-  if(b.length == winningLength) {
-    return a
+  else if(b.length> a.length && b.length>c.length){
+    return b
   }
-  if(c.length == winningLength) {
+  else if(c.length>a.length &&c.length>b.length){
     return c
   }
 }
